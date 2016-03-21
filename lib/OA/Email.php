@@ -1188,8 +1188,8 @@ class OA_Email
     	// For the time being we're sending plain text emails only, so decode any HTML entities
     	$contents = html_entity_decode($contents, ENT_QUOTES);
 
-    	// Build the "to:" header for the email
-    	if (!get_cfg_var('SMTP')) {
+    	// Build the "to:" param for php mail()
+    	if ($userName !== null) {
     		$toParam = '"'.$userName.'" <'.$userEmail.'>';
     	} else {
     		$toParam = $userEmail;
@@ -1200,9 +1200,6 @@ class OA_Email
     		$headersParam .= "Content-Type: text/plain; charset=" . $phpAds_CharSet . "\r\n";
     	}
     	$headersParam .= "Content-Transfer-Encoding: 8bit\r\n";
-    	if (get_cfg_var('SMTP')) {
-    		$headersParam .= 'To: "' . $userName . '" <' . $userEmail . ">\r\n";
-    	}
     	$headersParam .= 'From: "' . $fromDetails['name'] . '" <' . $fromDetails['emailAddress'] . '>' . "\r\n";
     	// Use only \n as header separator when qmail is used
     	if ($aConf['email']['qmailPatch']) {
