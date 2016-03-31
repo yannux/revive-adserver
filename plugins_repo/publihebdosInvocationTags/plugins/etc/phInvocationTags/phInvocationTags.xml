@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+
+<plugin>
+    <name>phInvocationTags</name>
+    <displayName>Ph Invocation Tags Plugin</displayName>
+    <creationDate>2016-03-22</creationDate>
+    <author>Yann Nave</author>
+    <authorEmail>ynave@directinfoservice.com</authorEmail>
+    <authorUrl>http://www.directinfoservice.com</authorUrl>
+    <license>GNU Gneral Public License v2</license>
+    <description>Phsite addLayer style</description>
+    <version>0.1.1</version>
+    <oxversion>3.2.2</oxversion>
+    <extends>invocationTags</extends>
+
+    <install>
+        <files>
+            <file path="{MODULEPATH}invocationTags/oxInvocationTags/layerstyles/phsite/">invocation.inc.php</file>
+            <file path="{MODULEPATH}invocationTags/oxInvocationTags/layerstyles/phsite/">layerstyle.inc.php</file>
+            <file path="{MODULEPATH}invocationTags/oxInvocationTags/layerstyles/phsite/">close_pop_mini.png</file>
+        </files>
+    </install>
+
+</plugin>

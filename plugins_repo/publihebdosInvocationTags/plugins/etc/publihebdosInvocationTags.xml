@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href=""?>
+
+<plugin>
+    <name>publihebdosInvocationTags</name>
+    <displayName>Publihebdos Invocation Tags Plugin</displayName>
+    <creationDate>2016-03-22</creationDate>
+    <author>Yann Nave</author>
+    <authorEmail>ynave@directinfoservice.com</authorEmail>
+    <authorUrl>http://www.directinfoservice.com</authorUrl>
+    <license>GNU Gneral Public License v2</license>
+    <description>Add layer styles for adLayer</description>
+    <version>0.1.0</version>
+    <type>package</type>
+
+    <install>
+
+        <contents>
+            <group name="phInvocationTags">10</group>
+        </contents>
+
+    </install>
+
+</plugin>
